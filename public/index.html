@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/public/img/seta.png" />
+    <!-- icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="shortcut icon" href="img/seta.png" />
     <link rel="stylesheet" href="css/main.css">
-    <title>Mi primer sitio con Tailwind.css</title>
-
+    <title>Super mario 3D world</title>
 </head>
 <body>  
-     <div class="mx-auto">
-         <nav class="bg-gray-800 flex justify-between lg:justify-start items-center">
+    <div class="xms:w-full mx-auto">
+        <nav class="bg-gray-800 flex justify-between lg:justify-start items-center">
             <div class="logo p-2 w-1/6">
                 <img src="img/logo.png" width="100" alt="">
             </div>
@@ -24,7 +25,7 @@
                     <li><a href="#" class="rounded-full bg-red-500 text-white font-bold px-4 py-3 hover:text-black hover:bg-white transition duration-500">Buy Now</a></li>
                 </ul>
             </div>
-
+            <!-- responsive menu-->
             <div class="block lg:hidden w-1/6 lg:w-4/6">
                 <a href="#" class="link" id="mobile-menu">Menu</a>
                 <ul class="mobile-links hidden w-full absolute z-50 left-0 text-center bg-gray-800">
@@ -36,28 +37,53 @@
                 </ul> 
             </div>
          </nav>
+         <!-- hero image -->
         <section class="header">
             <img src="img/hero.jpg">
         </section>
-
+        <!-- buy now -->
         <section>
             <div class="bg-wave-pattern h-6 bg-repeat-x relative -top-2"></div>
-            <div class="bg-wave-pattern-dots text-center p-4 flex md:flex-row flex-col grap-3 justify-center"></div>
-                <a href="#">Buy Now</a>
-                <a href="#">Watch the Trailer</a>
+            <div class="bg-wave-pattern-dots text-center p-4 flex md:flex-row flex-col gap-3 justify-center">
+                <a href="#" class="inline-block p-3 px-16 bg-black text-white font-bold- border-transparent border-8 text-2xl rounded-3xl hover:border-gray-200 hover:bg-white hover:text-black transition duration-200">Buy Now</a>
+                <a href="#" class="inline-block p-3 px-16 bg-red-500 text-white font-bold- border-transparent border-8 text-2xl rounded-3xl hover:border-gray-200 hover:bg-white hover:text-black transition duration-200">Watch the Trailer</a>
+            </div>
+            <div class="bg-wave-pattern bg-repeat-x h-6 relative top-2"></div>
         </section>
          
-         
+        <section class="bg-pattern-characters-red py-28">
+            <div class="lg:container mx-auto md:flex gap-5 md:w-full p-3">
+
+                <div class="left bg-character-mario bg-no-repeat bg-contain bg-top w-5/6 md:w-1/2 pt-52 max-auto">
+                    <div class="card text-center bg-white 2xl:w-5/6 mx-auto mt-72 rounded-2xl overflow-hidden xl:w-4/5">
+                        <div class="cover bg-black">
+                            <video src="videos/video01.mp4" autoplay loop muted></video>
+                        </div>
+                        <div class="conntent bg-wave-pattern bg-repeat-x relative -top-3">
+                            <h3 class="font-black text-4xl py-10">Play together</h3>
+                            <p class="text-xl">
+                                Work with (or against) you friends and family*
+                            </p>
+                            <a href="" class="xl:text-2xl my-4 inline-block py-2 px-16 bg-red-500 text-white font-black border-transparent border-8 rounded-3xl hover:border-gray-200 hover:bg-white hover:text-black transition duration-200 group">
+                                Watch the tailer <!-- esto es una flecha -->
+                                <i class="uil uil-angle-right-b text-yellow-300 text-3xl transition-all transform rotate-45 group-hover:text-red-500 xl:group-hover:ml-4"></i>
+                            </a>  
+                        </div>
+                        <div class="dots flex justify-between p-4">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right w-5/6 md:w-/2 text-center mx-auto">
+                    <h2 class="font-black text-white text"></h2>
+                </div>
+
+            </div>
+        </section>
     </div>
-    <script>
-        const menuButton = document.querySelector('#mobile-menu');
-
-        menuButton.addEventListener('click', e => {
-            const menu = document.querySelector('.mobile-links');
-
-            menu.classList.toggle('hidden');
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
 
