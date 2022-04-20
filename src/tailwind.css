@@ -11,3 +11,9 @@
 .dot{
     @apply h-3 w-3 bg-blue-600 rounded-full
 }
+.boton{
+    @apply xl:text-2xl my-4 inline-block py-2 px-16 bg-red-500 text-white font-black border-transparent border-8 rounded-3xl hover:border-gray-200 hover:bg-white hover:text-black transition duration-200 group
+}
+.coin{
+    @apply w-14 h-14 sm:w-20 sm:h-20
+}
